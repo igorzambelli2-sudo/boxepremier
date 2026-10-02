@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Aulas de boxe e MMA no Pricumã, em Boa Vista (RR). Agende sua aula experimental com a Boxe Premier.">
+<meta name="theme-color" content="#12060A">
+<meta property="og:title" content="Boxe Premier — Treine corpo e mente em Boa Vista">
+<meta property="og:description" content="Aulas de boxe e MMA no Pricumã. Agende sua aula experimental pelo WhatsApp.">
+<meta property="og:type" content="website">
+<title>Boxe Premier — Treine corpo e mente em Boa Vista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#12060A;--bg2:#2A0A14;--red:#E8203A;--ink:#FFFFFF;--muted:#C9B5BA;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.12);--ok:#3DDC84;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;color:var(--ink);background:radial-gradient(900px 500px at 88% 8%,var(--bg2),transparent 70%),var(--bg);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Archivo,Impact,sans-serif;margin:0;line-height:1.02;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;gap:14px}
+.logo{font:900 24px Archivo,sans-serif;text-decoration:none;letter-spacing:-.01em}
+.logo b{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;font:700 16px Inter,sans-serif;border-radius:999px;padding:14px 26px;text-decoration:none;box-shadow:0 8px 28px rgba(232,32,58,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:2px solid var(--line);box-shadow:none}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;padding:64px 0 72px}
+.hero h1{font-size:clamp(44px,7.4vw,88px);font-weight:900}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lead{font-size:19px;color:var(--muted);max-width:52ch;margin:22px 0 0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0}
+.chk{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-weight:500}
+.chk svg{flex:none;margin-top:2px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.art{position:relative;border-radius:30px;aspect-ratio:1/1;overflow:hidden;background:linear-gradient(160deg,#4A0F1E,#1A0509 70%);border:1px solid var(--line)}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.glove{transform-origin:50% 90%;animation:sway 4s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(-5deg) translateY(-6px)}}
+.tag{position:absolute;background:#0E1A2B;border:1px solid var(--line);border-radius:16px;padding:12px 16px;font-size:14px;color:var(--muted);max-width:190px}
+.tag b{display:block;color:#fff;font:800 16px Archivo,sans-serif;margin-bottom:2px}
+.t1{left:-6px;top:26px}.t2{right:-6px;bottom:26px}
+.rise{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+.rise:nth-child(2){animation-delay:.12s}.rise:nth-child(3){animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+section{padding:80px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(32px,5vw,54px);font-weight:900;margin-bottom:14px}
+h2 em{font-style:normal;color:var(--red)}
+.sub{color:var(--muted);max-width:56ch;margin:0 0 40px}
+.ben{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ben div{border-top:3px solid var(--red);background:var(--card);border-radius:0 0 16px 16px;padding:20px 18px 24px}
+.ben h3{font-size:22px;margin-bottom:8px}
+.ben p{margin:0;color:var(--muted);font-size:15.5px}
+.stat{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:linear-gradient(120deg,#3A0C18,#1A0509);border:1px solid var(--line);border-radius:26px;padding:34px}
+.stat strong{font:900 clamp(60px,10vw,112px)/1 Archivo,sans-serif;color:var(--red)}
+.stat p{margin:0;font-size:20px;max-width:34ch}
+.stat small{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+dl{margin:0 0 26px;display:grid;grid-template-columns:auto 1fr;gap:10px 22px}
+dt{font-weight:600}dd{margin:0;color:var(--muted)}
+.final{text-align:center}
+.final h2{max-width:16ch;margin:0 auto 18px}
+.final .sub{margin:0 auto 28px}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;text-align:center;color:var(--muted);font-size:14px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:9}
+.ic{width:54px;height:54px;border-radius:14px;background:var(--red);display:grid;place-items:center;margin-bottom:14px}
+.scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.scene{margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(170deg,#4A0F1E,#1A0509 75%)}
+.scene svg{display:block;width:100%;height:auto}
+.scene figcaption{padding:16px 18px 22px;color:var(--muted);font-size:15px}
+.scene figcaption b{display:block;color:#fff;font:800 20px Archivo,sans-serif;margin-bottom:2px}
+.bag{transform-origin:160px 70px;animation:swing 3.6s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@media (max-width:860px){.scenes{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+@media (max-width:860px){.hero,.loc{grid-template-columns:1fr}.ben{grid-template-columns:1fr 1fr}.art{max-width:440px;margin:0 auto;width:100%}.checks{grid-template-columns:1fr}.stat{grid-template-columns:1fr}}
+@media (max-width:480px){.ben{grid-template-columns:1fr}.t1{left:8px}.t2{right:8px}header .btn{padding:11px 18px;font-size:14px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scene img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.vals{background:var(--red);display:grid;align-content:center;padding:30px;border:0}
+.vals b{display:block;font:900 clamp(34px,4vw,46px)/1.15 Archivo,sans-serif}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px}
+.plan.hot{border-color:var(--red);background:linear-gradient(160deg,#3A0C18,#1A0509)}
+.plan h3{font-size:26px}
+.pr{font:900 56px/1.1 Archivo,sans-serif;color:var(--red);margin:10px 0 14px}
+.pr small{font:500 16px Inter,sans-serif;color:var(--muted);margin-left:4px}
+.plan ul{margin:0 0 20px;padding-left:20px;color:var(--muted)}
+.plan li{margin:6px 0}
+.note{color:var(--muted);margin:24px 0 0}
+@media (max-width:860px){.plans{grid-template-columns:1fr}}
+.logo{display:inline-flex;align-items:center;gap:12px}
+.logo img{width:48px;height:48px;border-radius:50%;border:2px solid var(--red);object-fit:cover}
+.brand{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;margin-top:34px;border:1px solid var(--line);border-radius:24px;padding:18px;background:var(--card)}
+.brand img{width:min(300px,100%);border-radius:16px;display:block}
+.brand h3{font-size:30px;margin-bottom:8px}
+.brand p{margin:0;color:var(--muted);max-width:44ch}
+@media (max-width:860px){.brand{grid-template-columns:1fr}.brand img{max-width:340px}}
+html{background:radial-gradient(900px 500px at 88% 8%,var(--bg2),transparent 70%),var(--bg)}
+body{background:transparent}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(520px 420px at 12% 32%,rgba(232,32,58,.14),transparent 70%),radial-gradient(640px 520px at 88% 78%,rgba(120,10,40,.28),transparent 70%);animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(-3%,4%,0) scale(1.1)}}
+#bar{position:fixed;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;z-index:40;box-shadow:0 0 12px var(--red)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(18,6,10,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;right:-6%;top:6%;width:62%;aspect-ratio:1;background:radial-gradient(circle,rgba(232,32,58,.4),transparent 65%);filter:blur(34px);animation:glow 5s ease-in-out infinite;z-index:-1;pointer-events:none}
+@keyframes glow{50%{opacity:.55;transform:scale(1.12)}}
+.hero h1 em,h2 em{background:linear-gradient(90deg,#E8203A 0%,#FF8A98 45%,#E8203A 90%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn:hover::after{left:130%}
+.ctas .btn:not(.ghost){animation:ring 2.4s infinite}
+@keyframes ring{0%{box-shadow:0 8px 28px rgba(232,32,58,.35),0 0 0 0 rgba(232,32,58,.55)}70%,100%{box-shadow:0 8px 28px rgba(232,32,58,.35),0 0 0 18px rgba(232,32,58,0)}}
+.art{box-shadow:0 30px 80px rgba(232,32,58,.28);transition:transform .25s ease-out;will-change:transform;animation:pop 1s .3s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes pop{from{opacity:0;transform:scale(.92) rotate(2deg)}}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(18,6,10,.65));pointer-events:none}
+.art img{animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.08)}}
+.tag{z-index:2;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.t1{animation:float 5s ease-in-out infinite}.t2{animation:float 6s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translateY(-8px)}}
+.belt{background:var(--red);overflow:hidden;white-space:nowrap;padding:14px 0;transform:rotate(-1.5deg);margin:6px -14px 26px;box-shadow:0 10px 40px rgba(232,32,58,.35)}
+.belt div{display:inline-block;padding-left:100%;animation:run 32s linear infinite;font:900 26px Archivo,sans-serif;letter-spacing:.04em}
+.belt b{margin:0 26px;color:#12060A;opacity:.55}
+@keyframes run{to{transform:translateX(-100%)}}
+.ben>div,.plan,.chk,.scene,.brand{transition:translate .3s,box-shadow .3s,border-color .3s}
+.ben>div:hover,.plan:hover,.chk:hover,.scene:hover,.brand:hover{translate:0 -6px;box-shadow:0 18px 44px rgba(232,32,58,.28);border-color:rgba(232,32,58,.6)}
+.ben>div:hover .ic{animation:wob .6s}
+@keyframes wob{30%{transform:rotate(-12deg) scale(1.12)}60%{transform:rotate(8deg)}}
+.scene img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.scene:hover img{transform:scale(1.07)}
+.vals{background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 14px,transparent 14px 28px),var(--red)}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:wap 2s infinite}
+@keyframes wap{to{transform:scale(1.7);opacity:0}}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1),translate .3s,box-shadow .3s,border-color .3s}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1!important;transform:none!important}#bar{display:none}}
+.vband{margin-top:20px;display:flex;justify-content:space-around;gap:16px;flex-wrap:wrap;background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 14px,transparent 14px 28px),var(--red);border-radius:22px;padding:26px 20px;font:900 clamp(24px,4vw,40px)/1.1 Archivo,sans-serif;text-transform:uppercase;text-align:center}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<header><div class="wrap">
+  <a class="logo" href="#" aria-label="Boxe Premier, início"><img src="img/logo-selo.jpg" alt="">BOXE <b>PREMIER</b></a>
+  <a class="btn" href="https://wa.me/5595991113458?text=Ol%C3%A1!%20Quero%20conhecer%20as%20aulas%20da%20Boxe%20Premier" target="_blank" rel="noopener">Aula experimental</a>
+</div></header>
+
+<main class="wrap hero">
+  <div>
+    <h1 class="rise">Treine corpo e mente na <em>Nobre Arte.</em></h1>
+    <p class="lead rise">Aulas de boxe no Pricumã, em Boa Vista, com acompanhamento do professor. Saúde e bem-estar com benefícios para a vida toda.</p>
+    <div class="checks rise">
+      <div class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#3DDC84"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#0B1F14" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Aulas com acompanhamento do professor</div>
+      <div class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#3DDC84"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#0B1F14" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Treino que cuida do corpo e da mente</div>
+      <div class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#3DDC84"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#0B1F14" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>94% dos avaliadores recomendam</div>
+      <div class="chk"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#3DDC84"/><path d="M7 12.5l3.2 3.2L17 9" stroke="#0B1F14" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Mensalidade a partir de R$120</div>
+    </div>
+    <div class="ctas rise">
+      <a class="btn" href="https://wa.me/5595991113458?text=Ol%C3%A1!%20Quero%20conhecer%20as%20aulas%20da%20Boxe%20Premier" target="_blank" rel="noopener">Quero treinar</a>
+      <a class="btn ghost" href="#turmas">Ver valores</a>
+    </div>
+  </div>
+  <div class="art">
+    <img src="img/hero.jpg" alt="Boxeador acertando um soco no adversário durante uma luta, com respingos de suor no ar">
+    <div class="tag t1"><b>Boxe para todos</b>Corpo forte, mente leve</div>
+    <div class="tag t2"><b>Pricumã, Boa Vista</b>Rua Pastor Almir Nogueira Guerra, 341</div>
+  </div>
+</main>
+
+<div class="belt" aria-hidden="true"><div>BOXE<b>✦</b>JIU-JITSU<b>✦</b>MMA<b>✦</b>MUAY THAI<b>✦</b>GRAPPLING<b>✦</b>WRESTLING<b>✦</b>BOXE<b>✦</b>JIU-JITSU<b>✦</b>MMA<b>✦</b>MUAY THAI<b>✦</b>GRAPPLING<b>✦</b>WRESTLING<b>✦</b></div></div>
+
+<section><div class="wrap">
+  <h2>Benefícios que você <em>sente</em> na primeira semana</h2>
+  <p class="sub">O boxe combina técnica, cardio e força. É um treino intenso, mas que se ajusta ao seu ritmo.</p>
+  <div class="ben">
+    <div><div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M13 8C13 38 35 38 35 8"/><rect x="9" y="4" width="8" height="12" rx="3" fill="#fff"/><rect x="31" y="4" width="8" height="12" rx="3" fill="#fff"/></svg></div><h3>Condicionamento</h3><p>Mais fôlego e resistência com treinos dinâmicos de socos, esquivas e movimentação.</p></div>
+    <div><div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" d="M24 4c4 9 13 13 11 24-1 7-6 13-11 13s-10-6-11-13c-1-6 4-9 5-15 2 2 4-1 6-9z"/></svg></div><h3>Queima calórica</h3><p>Aulas aeróbicas e intensas, que ajudam a perder gordura e ganhar definição.</p></div>
+    <div><div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="2.5" fill="#fff"/></svg></div><h3>Coordenação</h3><p>Técnica, equilíbrio e reflexo melhoram a cada aula.</p></div>
+    <div><div class="ic"><svg width="30" height="30" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M5 18q6-8 12 0t12 0 12 0"/><path d="M5 31q6-8 12 0t12 0 12 0"/></svg></div><h3>Mente leve</h3><p>Descarregar a energia no saco de pancada alivia o estresse do dia.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Respeito no ringue. <em>Evolução em cada round.</em></h2>
+  <p class="sub">Treino sério, ambiente de respeito e evolução que você vê de perto.</p>
+  <div class="scenes">
+    <figure class="scene"><img src="img/galeria-foco.jpg" alt="Boxeador de capacete vermelho apoiado nas cordas do ringue"><figcaption><b>Foco</b>Disciplina antes de cada round</figcaption></figure>
+    <figure class="scene"><img src="img/galeria-treino.jpg" alt="Mãos de um boxeador enrolando uma bandagem vermelha"><figcaption><b>Treino</b>Proteção em cada treino</figcaption></figure>
+    <figure class="scene"><img src="img/galeria-ringue.jpg" style="object-position:50% 30%" alt="Dois boxeadores treinando sparring no ringue, um de capacete azul e outro de vermelho"><figcaption><b>No ringue</b>Técnica e coragem</figcaption></figure>
+  </div>
+  <div class="vband"><b>Disciplina</b><b>Respeito</b><b>Evolução</b></div>
+</div></section>
+
+<section id="turmas"><div class="wrap">
+  <h2>Turmas e <em>valores</em></h2>
+  <p class="sub">Comece pela aula experimental e escolha o plano que cabe no seu bolso.</p>
+  <div class="plans">
+    <div class="plan"><h3>Turma de Boxe</h3><div class="pr">R$120<small>/mês</small></div>
+      <ul><li>Agende uma aula experimental pelo WhatsApp</li><li>Treino com acompanhamento do professor</li></ul>
+      <a class="btn" href="https://wa.me/5595991113458?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20de%20boxe" target="_blank" rel="noopener">Agendar aula de boxe</a></div>
+    <div class="plan hot"><h3>MMA, artes marciais mistas</h3><div class="pr">R$120<small>/mês</small></div>
+      <ul><li>Segunda, quarta e sexta, das 17h às 18h</li><li>Aula experimental gratuita</li><li>Diária: R$25</li><li>Traga luva de boxe, bandagem e caneleiras</li></ul>
+      <a class="btn" href="https://wa.me/5595991113458?text=Ol%C3%A1!%20Quero%20conhecer%20a%20turma%20de%20MMA" target="_blank" rel="noopener">Falar sobre o MMA</a></div>
+  </div>
+  <div class="brand"><img src="img/logo-ct.jpg" alt="Logo do CT Boxe Premier: caveira com moicano vermelho, punho e o nome do professor Reginaldo"><div><h3>CT Boxe Premier</h3><p>Boxe, jiu-jitsu, MMA, muay thai, grappling e wrestling, com o professor Reginaldo.</p></div></div>
+</div></section>
+
+<section id="onde"><div class="wrap loc">
+  <div>
+    <h2>Venha <em>conhecer</em> o espaço</h2>
+    <p class="sub">Chame no WhatsApp, tire suas dúvidas e combine sua primeira aula.</p>
+    <dl>
+      <dt>Endereço</dt><dd>R. Pastor Almir Nogueira Guerra, 341, Pricumã, Boa Vista, RR, 69309-413</dd>
+      <dt>WhatsApp</dt><dd>(95) 99111-3458</dd>
+      <dt>Instagram</dt><dd><a href="https://www.instagram.com/boxepremier/" target="_blank" rel="noopener">@boxepremier</a></dd>
+    </dl>
+    <a class="btn" href="https://wa.me/5595991113458?text=Ol%C3%A1!%20Quero%20conhecer%20as%20aulas%20da%20Boxe%20Premier" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+  </div>
+  <div class="final" style="display:grid;align-content:center">
+    <h2>Seu primeiro round começa hoje.</h2>
+    <p class="sub">Luvas, foco e um professor ao seu lado.</p>
+  </div>
+</div></section>
+
+<footer>© Boxe Premier, Boa Vista. Valores e horários conforme os cartazes da academia; confirme pelo WhatsApp.</footer>
+
+<a class="wa" href="https://wa.me/5595991113458" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 13.8c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.600c-.1.200-.3.300-.1.600.6 1 1.400 1.800 2.400 2.300.3.200.5.100.7-.1l.9-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.4.200.5.300.1.300.1.900-.1 1.500z"/></svg></a>
+<script>
+(function(){
+  var d=document.documentElement,rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  d.classList.add("js");
+  var els=[].slice.call(document.querySelectorAll("section h2,section .sub,.ben>div,.scene,.plan,.brand,.vband,dl,.loc .btn,.final"));
+  els.forEach(function(e){e.classList.add("rv")});
+  if(rm||!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")})}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){
+      if(!x.isIntersecting)return;var t=x.target;
+      t.style.transitionDelay=(t.dataset.d||0)+"ms";t.classList.add("in");io.unobserve(t);
+      setTimeout(function(){t.style.transitionDelay=""},1500);
+    })},{threshold:.15});
+    els.forEach(function(e){var i=[].indexOf.call(e.parentNode.children,e);e.dataset.d=Math.min(i,5)*100;io.observe(e)});
+  }
+  var bar=document.getElementById("bar");
+  function sc(){var m=d.scrollHeight-innerHeight;bar.style.transform="scaleX("+(m>0?Math.min(scrollY/m,1):0)+")"}
+  addEventListener("scroll",sc,{passive:true});sc();
+  var art=document.querySelector(".art"),hero=document.querySelector(".hero");
+  if(art&&hero&&!rm&&matchMedia("(hover:hover)").matches){
+    hero.addEventListener("pointermove",function(e){
+      var r=art.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      art.style.transform="perspective(900px) rotateY("+(x*10)+"deg) rotateX("+(-y*8)+"deg)";
+    });
+    hero.addEventListener("pointerleave",function(){art.style.transform=""});
+  }
+})();
+</script>
+</body>
+</html>
