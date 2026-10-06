@@ -42,4 +42,44 @@ footer{padding:28px 0;color:#827a75;font-size:13px}.wa{position:fixed;right:18px
 </main>
 <footer><div class="wrap">© Boxe Premier · Boa Vista, Roraima</div></footer>
 <a class="wa" href="https://wa.me/5595991113458?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Boxe%20Premier" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.2 13.8c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.6 1 1.4 1.8 2.4 2.3.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.9-.1 1.5z"/></svg></a>
+<script>
+/* motion layer */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion) {
+  document.documentElement.classList.add('motion-ready');
+  const revealTargets = document.querySelectorAll('section .eyebrow, section h2, section .intro, .card, .gallery figure, .plan, .coach, .detail, .final');
+  revealTargets.forEach((el,i)=>{ el.classList.add('reveal'); el.style.setProperty('--delay', (i%3)*80+'ms'); });
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target); }});
+  }, {threshold:.13, rootMargin:'0px 0px -45px'});
+  revealTargets.forEach(el=>io.observe(el));
+
+  const hero = document.querySelector('.hero-photo img');
+  window.addEventListener('scroll', () => {
+    if (hero && window.scrollY < 900) hero.style.transform = 'scale(1.06) translateY('+(window.scrollY*.035)+'px)';
+    document.body.classList.toggle('scrolled', window.scrollY > 40);
+  }, {passive:true});
+
+  document.querySelectorAll('.gallery figure').forEach(fig=>{
+    fig.addEventListener('mousemove',e=>{
+      const r=fig.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      fig.style.setProperty('--mx',(x*8)+'px'); fig.style.setProperty('--my',(y*8)+'px');
+    });
+    fig.addEventListener('mouseleave',()=>{fig.style.setProperty('--mx','0px');fig.style.setProperty('--my','0px')});
+  });
+}
+</script>
+<style>
+.motion-ready .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--delay,0ms),transform .7s cubic-bezier(.2,.7,.2,1) var(--delay,0ms)}
+.motion-ready .reveal.in{opacity:1;transform:none}
+.hero-photo{overflow:hidden}.hero-photo img{transform:scale(1.06);transition:transform .12s linear}
+header{transition:height .25s,background .25s,box-shadow .25s}body.scrolled header{background:rgba(11,9,9,.985);box-shadow:0 12px 32px #0005}
+.ticker{position:relative;overflow:hidden}.ticker:after{content:"";position:absolute;left:-25%;bottom:0;width:25%;height:2px;background:var(--red);animation:ringLine 4s linear infinite}
+@keyframes ringLine{to{left:110%}}
+.gallery figure img{transform:scale(1.035) translate(var(--mx,0),var(--my,0));transition:transform .35s cubic-bezier(.2,.7,.2,1),filter .35s}.gallery figure:hover img{transform:scale(1.09) translate(var(--mx,0),var(--my,0));filter:saturate(.95)}
+.card,.plan{transition:transform .25s,border-color .25s,background .25s}.card:hover,.plan:hover{transform:translateY(-6px);background:#1a1515}.plan:hover{border-color:#6d5656}
+.btn{position:relative;overflow:hidden}.btn:after{content:"";position:absolute;inset:0;transform:translateX(-115%) skewX(-20deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:transform .55s}.btn:hover:after{transform:translateX(115%) skewX(-20deg)}
+.stamp{animation:stampIn .75s cubic-bezier(.2,.8,.2,1) .3s both}@keyframes stampIn{from{opacity:0;transform:translateY(20px) rotate(-2deg)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </body></html>
